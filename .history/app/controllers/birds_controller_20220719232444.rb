@@ -33,7 +33,7 @@ class BirdsController < ApplicationController
     end
   end
 
-  #destroy /birds
+  #destroy
   def destroy
     bird = Bird.find_by(id: params[:id])
     if bird

@@ -33,7 +33,7 @@ class BirdsController < ApplicationController
     end
   end
 
-  #destroy /birds
+ 
   def destroy
     bird = Bird.find_by(id: params[:id])
     if bird
@@ -43,7 +43,7 @@ class BirdsController < ApplicationController
       render json: { error: "Bird not found" }, status: :not_found
     end
   end  
-
+  
   # PATCH /birds/:id/like
   def increment_likes
     bird = Bird.find_by(id: params[:id])
