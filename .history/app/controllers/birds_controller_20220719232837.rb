@@ -38,8 +38,8 @@ class BirdsController < ApplicationController
     bird = Bird.find_by(id: params[:id])
     if bird
       bird.destroy
-      # head :no_content 
-      render json: {Status: "OpSuccesifull"}
+      head :no_content 
+      render json: {}
     else
       render json: { error: "Bird not found" }, status: :not_found
     end

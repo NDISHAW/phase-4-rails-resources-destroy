@@ -39,7 +39,7 @@ class BirdsController < ApplicationController
     if bird
       bird.destroy
       # head :no_content 
-      render json: {Status: "OpSuccesifull"}
+      render json: {status: "OpSuccesifull"}
     else
       render json: { error: "Bird not found" }, status: :not_found
     end
